@@ -4961,7 +4961,7 @@ async function installHelm(version) {
 
 async function installHelmPlugins(plugins) {
   for (const plugin of plugins) {
-    await exec.exec(`helm plugin install ${plugin}`);
+    await exec.exec(`${os.homedir}/bin/helm plugin install ${plugin}`);
   }
 }
 
