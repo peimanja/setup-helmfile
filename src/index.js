@@ -1,4 +1,5 @@
 const core = require(`@actions/core`);
+const os = require("os");
 const { installKubectl, installHelm, installHelmPlugins, installHelmfile } = require("./setup");
 
 async function run() {

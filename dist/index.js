@@ -5196,6 +5196,7 @@ exports.getCmdPath = getCmdPath;
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
 const core = __webpack_require__(470);
+const os = __webpack_require__(87);
 const { installKubectl, installHelm, installHelmPlugins, installHelmfile } = __webpack_require__(636);
 
 async function run() {
