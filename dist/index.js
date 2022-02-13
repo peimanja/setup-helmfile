@@ -5200,6 +5200,9 @@ const { installKubectl, installHelm, installHelmPlugins, installHelmfile } = __w
 
 async function run() {
   try {
+    if (!process.env["PATH"].startsWith(`${os.homedir}/bin`)) {
+      core.addPath(`${os.homedir}/bin`);
+    }
     if (core.getInput("install-kubectl") === "yes") {
       installKubectl(core.getInput("kubectl-version"), core.getInput("kubectl-release-date"));
     }
